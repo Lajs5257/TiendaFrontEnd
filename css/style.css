@@ -1,0 +1,93 @@
+/* Se usara metodologia BEM  para nombrar las clases */
+
+:root{
+    --primario: #9C27B0;
+    --primarioOscuro: #891190;
+    --secundario: #FFCE00;
+    --secundarioOscuro: #E6B800;
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuente: 'Comic Sans MS', cursive, sans-serif;
+}
+html{
+    font-size: 62.5%;/* 1rem = 10px */
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+/* Global */
+body{
+    background: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    margin: 0;
+}
+p {
+    font-size: 1.5rem;
+    font-family: var(--fuente);
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;
+    color: var(--blanco);
+}
+img {
+    max-width: 100%;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3{
+    text-align: center;
+    font-family: var(--fuente);
+    color: var(--secundario);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+}
+/* Footer */
+.footer {
+    background: var(--primarioOscuro);
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
+.footer__texto {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--blanco);
+}
+/* Navegacion */
+.navegacion {
+    background: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.navegacion__enlace {
+    font-family: var(--fuente);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--secundario);
+}
