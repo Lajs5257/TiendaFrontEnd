@@ -1,4 +1,4 @@
-/* Se usara metodologia BEM  para nombrar las clases */
+/** Se usara metodologia BEM  para nombrar las clases **/
 
 :root{
     --primario: #9C27B0;
@@ -17,7 +17,7 @@ html{
 *, *:before, *:after{
     box-sizing: inherit;
 }
-/* Global */
+/** Global **/
 body{
     background: var(--primario);
     font-size: 1.6rem;
@@ -55,7 +55,7 @@ h3 {
     font-size: 2.4rem;
 }
 
-/* Header */
+/** Header **/
 .header {
     display: flex;
     justify-content: center;
@@ -63,7 +63,7 @@ h3 {
 .header__logo {
     margin: 3rem 0;
 }
-/* Footer */
+/** Footer **/
 .footer {
     background: var(--primarioOscuro);
     padding: 3rem 0;
@@ -74,7 +74,7 @@ h3 {
     font-size: 1.4rem;
     color: var(--blanco);
 }
-/* Navegacion */
+/** Navegacion **/
 .navegacion {
     background: var(--primarioOscuro);
     padding: 1rem 0;
@@ -90,4 +90,35 @@ h3 {
 .navegacion__enlace--activo,
 .navegacion__enlace:hover {
     color: var(--secundario);
+}
+/** Grid **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/** Productos **/
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+.producto__imagen {
+    width: 100%;
+}
+.producto__nombre {
+    font-size: 3.2rem;
+}
+.producto__precio {
+    font-size: 2.4rem;
+    color: var(--secundario);
+}
+.producto__nombre,
+.producto__precio {
+    text-align: center;
+    margin: 2rem 0;
 }
