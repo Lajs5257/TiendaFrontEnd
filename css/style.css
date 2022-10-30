@@ -146,26 +146,27 @@ h3 {
     }
 }
 /** info **/
-.info {
-    max-width: 120rem;
+.nosotros {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    
 }
-.info__texto {
+.nosotros__texto {
     font-size: 2rem;
     color: var(--blanco);
+    font-family: 'Arial', sans-serif;
 }
 @media (max-width: 768px) {
-    .info {
+    .nosotros {
         grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
     }
-    .info__imagen {
+    .nosotros__imagen {
         grid-row: 1/2;
+        width: 100%;
     }
-}
-    
-.info__imagen {
-    
 }
