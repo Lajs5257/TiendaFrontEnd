@@ -9,6 +9,7 @@
     --negro: #000;
 
     --fuente: 'Comic Sans MS', cursive, sans-serif;
+    --fuentePrincipal: 'Staatliches', cursive;
 }
 html{
     font-size: 62.5%;/* 1rem = 10px */
@@ -42,7 +43,7 @@ img {
 }
 h1, h2, h3{
     text-align: center;
-    font-family: var(--fuente);
+    font-family: var(--fuentePrincipal);
     color: var(--secundario);
 }
 h1 {
@@ -185,5 +186,60 @@ h3 {
 .bloque__titulo {
     margin: 0;
 }
-
-    
+/** Pagina del producto **/
+@media (min-width: 768px) {
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+.camisa__imagen {
+    display: block;
+    /* alinenar la imagen al centro */
+    margin: 0 auto;
+}
+.camisa__contenido {
+}
+.camisa__descripcion {
+    text-align: center;
+}
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.formulario__campo {
+    border: 1 rem  solid var(--primarioOscuro);
+    border-radius: 10%;
+    background-color: transparent;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    font-size: 2rem;
+}
+.formulario__campo--label {
+    border: 1 rem  solid var(--primarioOscuro);
+    border-radius: 10%;
+    background-color: transparent;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: right;
+}
+.formulario__submit {
+    background-color: var(--secundarioOscuro);
+    color: var(--negro);
+    font-size: 1.6rem;
+    padding: 1rem;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    transition: background-color .3s ease;
+    grid-column: auto / span 4;
+}
+.formulario__submit:hover {
+    cursor: pointer;
+    background-color: var(--secundario);
+}
